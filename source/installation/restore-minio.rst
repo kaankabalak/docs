@@ -42,14 +42,18 @@ and links to procedures for recovering from each:
 .. admonition:: MinIO Professional Support
    :class: note
 
-   |subnet| provides 24/7 direct-to-engineering support for MinIO 
-   deployments. Consider leveraging SUBNET to ensure smooth and reliable
-   operation of MinIO deployments, including root-cause analysis, 
-   health diagnostics, and architecture reviews.
+   |subnet| provides 24/7 direct-to-engineering support for MinIO deployments.
+   SUBNET is a key component for ensuring smooth and reliable operation of MinIO
+   deployments, including root-cause analysis, health diagnostics, and
+   architecture reviews.
 
-   You can alternatively seek support on the 
-   `MinIO Community Slack <https://minio.slack.com>`__. Community Support
-   is best-effort only and has no SLAs around responsiveness.
+   Existing SUBNET users should `log in <https://subnet.min.io/>`__ and
+   create a new issue to synchronize any recovery operations with MinIO
+   engineering.
+
+   Community users can seek support on the `MinIO Community Slack
+   <https://minio.slack.com>`__. Community Support is best-effort only and has
+   no SLAs around responsiveness.
 
 .. _minio-restore-hardware-failure-drive:
 
@@ -68,6 +72,11 @@ The procedure can be summarized as follows:
 4. Update ``/etc/fstab`` (if necessary) and remount the drive.
 5. Monitor MinIO logs to verify detection and healing of the drive.
 6. Use :mc-cmd:`mc admin heal` to inspect healing status.
+
+Replacement drives should be freshly formatted and empty. MinIO healing ensures
+consistency and correctness of all data restored onto the drive. **Do not**
+attempt to manually recover or migrate data from the failed drive onto the new
+healthy drive.
 
 The replacement drive hardware should be substantially similar to the failed
 drive. For example, replace a failed SSD with another SSD drive of the same
