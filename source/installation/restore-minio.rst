@@ -12,7 +12,7 @@ Recover after Hardware Failure
    :depth: 1
 
 Distributed MinIO deployments rely on :ref:`Erasure Coding
-<minio-erasure-coding>` to provides built-in tolerance for multiple disk or node
+<minio-erasure-coding>` to provide built-in tolerance for multiple disk or node
 failures. Depending on the deployment topology, MinIO can tolerate the loss of
 up to half the drives or nodes in the deployment while maintaining read access
 to stored objects.
@@ -36,7 +36,7 @@ and links to procedures for recovering from each:
      - MinIO supports hot-swapping failed drives with new healthy drives. 
 
    * - :ref:`Node Failure <minio-restore-hardware-failure-node>`
-     - MinIO detects when a node rejoins the deployment and begins aggressively
+     - MinIO detects when a node rejoins the deployment and begins proactively healing the node shortly after it is joined back to the cluster
        healing data previously stored on that node.
 
 .. admonition:: MinIO Professional Support
@@ -73,7 +73,7 @@ The procedure can be summarized as follows:
 5. Monitor MinIO logs to verify detection and healing of the drive.
 6. Use :mc-cmd:`mc admin heal` to inspect healing status.
 
-Replacement drives should be freshly formatted and empty. MinIO healing ensures
+Replacement drives should be freshly formatted and must be empty. MinIO healing ensures
 consistency and correctness of all data restored onto the drive. **Do not**
 attempt to manually recover or migrate data from the failed drive onto the new
 healthy drive.
@@ -135,7 +135,7 @@ the failed disk points to the newly formatted replacement.
   correct newly formatted disk.
 
 - If using UUID-based disk assignment, update the UUID for each point based on
-  the newly formatted disk. Use ``lsblk`` to view disk UUIDs.
+  the newly formatted disk. You can use ``lsblk`` to view disk UUIDs.
 
 For example, consider 
 
