@@ -13,7 +13,7 @@ aside.sidebar {
     border: none;
 
     @include breakpoint-min(breakpoints(xl)) {
-        padding-top: $content-padding + $header-height;
+        padding-top: calc($content-padding + $header-height);
     }
 
     @include breakpoint-max(breakpoints(xl)) {

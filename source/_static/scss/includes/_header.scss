@@ -1,21 +1,24 @@
 // Using CSS variables to match the parent site's nav configs.
 :root {
-	--nav-text-color: #{$black};
-	--nav-item-border-color: #{$black};
+	--nav-text-color: #{$white};
+	--nav-item-border-color: #{$white};
 	--nav-item-arrow: #{$nav-arrow-icon};
-	--nav-toggle-hover-border-color: #{$black};
+	--nav-toggle-hover-border-color: #{$white};
 	--nav-bg-gray: #{$nav-sub-hover-bg};
-	--header-bg: #{$white};
-	--nav-top-border-color: #{$gray-200};
+	--nav-top-border-color: rgba(255, 255, 255, 0.2);
+
+	@include breakpoint-max(breakpoints(md)) {
+		--nav-text-color: #{$black};
+	}
 }
 
 .header {
-    height: $header-height;
-    background-color: $header-bg;
-    box-shadow: 0 0 0.75rem rgba($black, 0.1);
-    width: 100%;
-    z-index: $z-index-header;
-    flex-shrink: 0;
+	height: $header-height;
+	background-color: $header-bg;
+	box-shadow: 0 0 0.75rem rgba($black, 0.1);
+	width: 100%;
+	z-index: $z-index-header;
+	flex-shrink: 0;
 	padding: 0 $content-padding;
 
 	@include breakpoint-max(breakpoints(lg)) {
@@ -26,20 +29,31 @@
 	}
 }
 
+.container {
+	margin: 0 auto;
+	padding: 0 30px;
+	width: 100%;
+
+	@include breakpoint-min(breakpoints(xl)) {
+    max-width: $container-width;
+  }
+}
+
 .logo {
 	display: flex;
 	align-items: center;
 
 	@include breakpoint-min(breakpoints(lg)) {
 		position: absolute;
-		left: 1.3rem;
-		top: 0;
+		top: 5px;
 		z-index: 1;
 	}
 }
 
 .logo__link {
 	margin-left: 0.5rem;
+	position: relative;
+	top: 1px;
 }
 
 .nav {
@@ -72,13 +86,24 @@
 .nav__bottom {
 	@include breakpoint-min(breakpoints(lg)) {
 		display: flex;
-		margin: 0.25rem 0;
+		margin: 0.5rem 0;
 	}
 
 	align-items: center;
 	position: relative;
-	gap: 2rem;
+	gap: 0.5rem;
 	justify-content: flex-end;
+}
+
+.nav__bottom {
+	@include breakpoint-min(breakpoints(lg)) {
+		margin-left: -1rem;
+
+		.nav__link {
+			padding-right: 1rem;
+			padding-left: 1rem;
+		}
+	}
 }
 
 .nav__top {
@@ -127,6 +152,7 @@
 	@include breakpoint-min(breakpoints(lg)) {
 		.nav__link {
 			padding-right: 1.25rem;
+			margin-right: 0.5rem;
 			background: var(--nav-item-arrow) no-repeat top 20px right 0.25rem;
 
 			&:after {
@@ -223,7 +249,7 @@
 	border: 1px solid $theme-red;
 	transition: background-color 300ms, color 300ms;
 	border-radius: $border-radius;
-	padding: 0.2rem 0.95rem 0.3rem;
+	padding: 0.25rem 1rem 0.35rem;
 	margin-left: auto;
 
 	&:hover {

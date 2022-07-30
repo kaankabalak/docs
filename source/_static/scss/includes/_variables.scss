@@ -32,7 +32,7 @@ $breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1280px
 );
 
 
@@ -45,7 +45,7 @@ $font-family-base: 'Mark', sans-serif;
 $font-family-headings: 'Mark', sans-serif;
 $root-font-size: 16px;
 $body-font-size: 1rem;
-$body-line-height: 1.5;
+$body-line-height: 1.6;
 $body-color: #4b4b4b;
 $body-bg: #F9F9F9;
 
@@ -63,7 +63,7 @@ $font-size-md: 0.9375rem;
 
 
 // Layout
-$container-width: 95%;
+$container-width: 1280px;
 $content-bg: $white;
 $content-padding: 1.75rem; 
 $content-padding-mobile: 1.25rem; 
@@ -80,9 +80,9 @@ $link-hover-color: #0036b9;
 
 
 // Header
-$header-height: 5.65rem;
-$header-height-mobile: 4.5rem;
-$header-bg: $white;
+$header-height: 105px;
+$header-height-mobile: 77px;
+$header-bg: #031733;
 $logo-height: 1.05rem;
 
 
