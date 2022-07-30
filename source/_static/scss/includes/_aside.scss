@@ -1,6 +1,6 @@
-aside.sidebar {
+div.sidebar {
     width: $sidebar-width;
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
     background-color: $sidebar-bg;
@@ -11,10 +11,6 @@ aside.sidebar {
     z-index: $z-index-header - 1;
     margin: 0;
     border: none;
-
-    @include breakpoint-min(breakpoints(xl)) {
-        padding-top: calc($content-padding + $header-height);
-    }
 
     @include breakpoint-max(breakpoints(xl)) {
         transform: translate3d(-100%, 0, 0);

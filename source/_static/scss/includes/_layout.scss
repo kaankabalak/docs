@@ -6,7 +6,13 @@
 
     @include breakpoint-min(breakpoints(lg)) {
         display: flex;
+        flex-direction: column;
     }
+}
+
+.content__container {
+    display: flex;
+    flex-direction: row;
 }
 
 .content__main {
@@ -15,12 +21,6 @@
     background-color: $content-bg;
     align-self: flex-start;
     padding: $content-padding;
-
-    @include breakpoint-min(breakpoints(xl)) { 
-        padding-left: $sidebar-width + $content-padding;
-        transition: padding-left 300ms;
-        will-change: padding-left;
-    }
 }
 
 .sidebar-active {
