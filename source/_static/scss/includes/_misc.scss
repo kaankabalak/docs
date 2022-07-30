@@ -3,7 +3,9 @@ $toggleIcons: (
     docs: 'docs.svg',
     menu: 'menu.svg',
     close: 'close-circle.svg',
-    toc: 'toc.svg'
+    toc: 'toc.svg',
+    dark: 'dark-mode.svg',
+    reading: 'reading-mode.svg'
 );
 
 @each $name, $icon in $toggleIcons {

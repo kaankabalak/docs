@@ -103,7 +103,6 @@ html_favicon = '_static/favicon.png'
 
 html_sidebars = {
     '**' : [
-        'searchbox.html',
         'navigation.html'
     ]
 }

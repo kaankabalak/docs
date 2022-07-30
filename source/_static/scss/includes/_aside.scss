@@ -74,6 +74,7 @@ div.sidebar {
     color: $search-color;
     font-size: 0.85rem;
     width: 100%;
+    max-width: 500px;
     padding: 0 1rem 0.1rem 2.6rem;
     background: $search-icon no-repeat center left 1rem;
     background-color: $search-bg;

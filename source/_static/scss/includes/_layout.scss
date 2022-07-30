@@ -3,6 +3,7 @@
     overflow-x: hidden;
     flex-wrap: nowrap;
     height: calc(100vh - #{$header-height});
+    background-color: $white;
 
     @include breakpoint-min(breakpoints(lg)) {
         display: flex;
@@ -13,6 +14,15 @@
 .content__container {
     display: flex;
     flex-direction: row;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+	padding: 0 30px;
+    background-color: $white;
+
+	@include breakpoint-min(breakpoints(xl)) {
+        max-width: $container-width;
+    }
 }
 
 .content__main {

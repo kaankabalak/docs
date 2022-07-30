@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="46" viewBox="0 0 46 46">
+  <defs>
+    <filter id="Rectángulo_1629" x="0" y="0" width="46" height="46" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_2419" data-name="Grupo 2419" transform="translate(-1530 -316)">
+    <g transform="matrix(1, 0, 0, 1, 1530, 316)" filter="url(#Rectángulo_1629)">
+      <rect id="Rectángulo_1629-2" data-name="Rectángulo 1629" width="28" height="28" rx="4" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <g id="book" transform="translate(1543.22 326)">
+      <path id="Trazado_7056" data-name="Trazado 7056" d="M4.026,2.23c2-.4,4.638-.454,6.439,1.346a.626.626,0,0,1,.183.443V17.8a.626.626,0,0,1-1.07.443A5.219,5.219,0,0,0,5.232,17.09,13.449,13.449,0,0,0,.907,18.359.626.626,0,0,1,0,17.8V4.019a.626.626,0,0,1,.346-.56l.281.56-.281-.56h0l.005,0L.37,3.447q.136-.068.276-.129A16.234,16.234,0,0,1,4.028,2.23ZM1.253,4.419V16.832A14.5,14.5,0,0,1,5.1,15.845a7.271,7.271,0,0,1,4.292.7V4.291c-1.332-1.164-3.3-1.2-5.124-.832a14.981,14.981,0,0,0-3.019.96Z" fill="#101d32" stroke="#101d32" stroke-width="0.8" fill-rule="evenodd"/>
+      <path id="Trazado_7057" data-name="Trazado 7057" d="M23.5,2.23c-2-.4-4.638-.454-6.439,1.346a.626.626,0,0,0-.183.443V17.8a.626.626,0,0,0,1.07.443,5.219,5.219,0,0,1,4.348-1.153,13.449,13.449,0,0,1,4.325,1.269.626.626,0,0,0,.907-.56V4.019a.626.626,0,0,0-.346-.56l-.281.56.281-.56h0l-.005,0-.016-.007L27.1,3.418q-.493-.23-1-.426a16.236,16.236,0,0,0-2.6-.763Zm2.774,2.19V16.832a14.5,14.5,0,0,0-3.851-.987,7.271,7.271,0,0,0-4.292.7V4.291c1.332-1.164,3.3-1.2,5.124-.832a14.978,14.978,0,0,1,3.019.96Z" transform="translate(-7.479)" fill="#101d32" stroke="#101d32" stroke-width="0.8" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>
